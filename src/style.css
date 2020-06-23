@@ -1,0 +1,238 @@
+body {
+  background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+  font-family: "News Cycle", sans-serif;
+}
+.container {
+  margin: 30px;
+}
+.weatherApp {
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  max-width: 700px;
+  padding: 20px;
+  background-color: #fff;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 3px 3px 6px rgba(37, 39, 89, 0.3);
+}
+.searchAndDate {
+  margin: 20px 0 40px 0;
+}
+
+.bar {
+  width: 60%;
+  border: solid;
+  border-color: #5b6275;
+  border-width: 2px;
+  border-radius: 2px;
+  background-color: rgb(91, 98, 117, 0.2);
+  text-indent: 5px;
+  color: #1c2847;
+}
+
+.submitButton,
+button input {
+  color: #5b6275;
+  background-color: transparent;
+  border: none;
+  text-align: center;
+}
+
+.inputButton {
+  width: 0px;
+  height: 0px;
+}
+
+.date {
+  text-align: center;
+  font-size: 14px;
+}
+
+.mainInformation {
+  color: #ec6e4d;
+  max-width: 45%;
+  padding: 0px 20px 30px 20px;
+  text-align: center;
+  max-width: 100%;
+}
+
+#city {
+  word-wrap: break-word;
+}
+
+h4 {
+  font-size: 15px;
+  margin: 10px 0 0 0;
+  text-align: center;
+}
+
+.mainTemperature {
+  color: #5b6275;
+  text-align: center;
+  margin: 0;
+}
+
+h1 {
+  font-size: 70px;
+}
+
+h2 {
+  font-size: 27px;
+}
+
+h3 {
+  font-size: 20px;
+  color: #939aa9;
+}
+.mainIcon {
+  border: solid;
+  border-width: 5px;
+  border-color: #dde0e3;
+  border-radius: 50%;
+  display: block;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.fiveDaysForecast {
+  text-align: center;
+  margin: 5px 0 5px 0;
+}
+
+h5 {
+  color: #ec6e4d;
+  text-align: center;
+  font-weight: bolder;
+  margin: 10px 0;
+}
+
+.smallIcon {
+  border: solid;
+  border-width: 3px;
+  border-color: #dde0e3;
+  border-radius: 3px;
+  text-align: center;
+  max-width: 80px;
+  padding: 4px;
+  background-color: #fff;
+}
+
+.maxTemp {
+  font-size: 18px;
+  font-weight: bold;
+  color: #5b6275;
+  margin: 0;
+}
+
+.minTemp {
+  font-size: 14px;
+  color: #939aa9;
+  margin: 0 0 10px 0;
+}
+
+.firstDay,
+.secondDay,
+.thirdDay,
+.fourthDay,
+.fifthDay {
+  border: solid;
+  border-radius: 4px;
+  border-color: #f5f4f7;
+  border-width: 1px;
+}
+.firstDay:hover,
+.secondDay:hover,
+.thirdDay:hover,
+.fourthDay:hover,
+.fifthDay:hover {
+  background-color: #f5f4f7;
+  border: solid;
+  border-radius: 4px;
+  border-color: #f5f4f7;
+  border-width: 1px;
+}
+
+#unitsLocationButtons {
+  text-align: center;
+  margin: 20px 0 0 0;
+}
+
+#buttonCelsius,
+#buttonFahrenheit,
+#currentLocationButton {
+  color: #fff;
+  text-align: center;
+  background: #ec6e4d;
+  display: inline-block;
+  margin: 0 5px auto;
+  border: solid;
+  border-color: #fff;
+  border-width: 2px;
+  border-radius: 2px;
+  outline: solid;
+  outline-color: #ec6e4d;
+  outline-width: 1px;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  transition: all 200ms ease;
+}
+
+#currentLocationButton {
+  color: #fff;
+  text-align: center;
+  background: #ec6e4d;
+  display: inline-block;
+  margin: 0 5px auto;
+  border: solid;
+  border-color: #fff;
+  border-width: 2px;
+  border-radius: 2px;
+  outline: solid;
+  outline-color: #ec6e4d;
+  outline-width: 1px;
+  width: auto;
+  text-decoration: bolder;
+  height: 30px;
+  text-align: center;
+  transition: all 200ms ease;
+}
+#buttonCelsius:hover,
+#buttonFahrenheit:hover,
+#currentLocationButton:hover {
+  opacity: 0.5;
+}
+
+#buttonCelsius:focus,
+#buttonFahrenheit:focus,
+#currentLocationButton:focus {
+  background-color: #5b6275;
+  outline-color: #5b6275;
+}
+
+footer {
+  margin: auto;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 13px;
+  text-align: center;
+  color: #000;
+  background-color: transparent;
+  position: relative;
+  bottom: -55px;
+}
+
+a {
+  color: #ec6e4d;
+}
+
+a:hover {
+  color: #ec6e4d;
+  opacity: 0.5;
+  text-decoration: none;
+}
+
+a:focus {
+  color: #5b6275;
+}

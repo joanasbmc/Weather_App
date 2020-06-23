@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+
+    <script
+      src="https://kit.fontawesome.com/bcb003fb0f.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=News+Cycle:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="src/style.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </head>
+  <style></style>
+  <body>
+    <div class="container">
+      <div class="weatherApp">
+        <div class="row justify-content-center searchAndDate">
+          <div class="col-8 searchBar">
+            <form id="submitCity">
+              <input
+                type="text"
+                placeholder="Enter a city"
+                class="bar"
+                id="searchBar"
+              />
+              <button class="submitButton">
+                <i class="fas fa-search"></i>
+                <input type="submit" value=" " class="inputButton" />
+              </button>
+            </form>
+          </div>
+          <div class="col-4 date">
+            <span id="date"> </span>
+            <br />
+            <span id="time"> </span>
+          </div>
+        </div>
+
+        <div class="row principal">
+          <div class="col-5 text-wrap text-break mainInformation">
+            <h2>
+              Right now, in
+              <br />
+              <strong id="city"></strong>:
+              <br />
+              <span id="weatherType">sunny</span>!
+            </h2>
+            <h4>
+              Wind: <span id="wind">7</span> m/s
+              <br />
+              Humidity: <span id="humidity">40</span>%
+              <br />
+            </h4>
+          </div>
+          <div class="col-3 mainTemperature">
+            <h1>
+              <strong>
+                <span class="temp" id="actualTemp">22</span
+                ><span class="unit">ºC</span>
+              </strong>
+            </h1>
+            <h3>
+              <strong>
+                <span>
+                  <span class="temp" id="maxTempToday">22</span
+                  ><span class="unit">ºC</span></span
+                >
+                /
+                <span>
+                  <span class="temp" id="minTempToday">22</span
+                  ><span class="unit">ºC</span>
+                </span>
+              </strong>
+            </h3>
+          </div>
+          <div class="col-4">
+            <img alt="weather" class="mainIcon" />
+          </div>
+        </div>
+        <div class="row fiveDaysForecast">
+          <div class="col firstDay">
+            <h5><strong id="dayOne">MON 4</strong></h5>
+            <img
+              src="images/rain.png"
+              alt="rain"
+              class="smallIcon"
+              id="icon1"
+            />
+            <br />
+            <p class="maxTemp">
+              <strong>
+                <span class="temp" id="maxTempFirst">22</span
+                ><span class="unit">ºC</span>
+              </strong>
+            </p>
+            <p class="minTemp">
+              <span class="temp" id="minTempFirst">22</span
+              ><span class="unit">ºC</span>
+            </p>
+          </div>
+          <div class="col secondDay">
+            <h5><strong id="dayTwo">TUE 5</strong></h5>
+            <img
+              src="images/cloud_sun.png"
+              alt="cloud_sun"
+              class="smallIcon"
+              id="icon2"
+            />
+            <br />
+            <p class="maxTemp">
+              <strong>
+                <span class="temp" id="maxTempSecond">22</span
+                ><span class="unit">ºC</span>
+              </strong>
+            </p>
+            <p class="minTemp">
+              <span class="temp" id="minTempSecond">22</span
+              ><span class="unit">ºC</span>
+            </p>
+          </div>
+
+          <div class="col thirdDay">
+            <h5><strong id="dayThree">WED 6</strong></h5>
+            <img
+              src="images/thunder.png"
+              alt="thunder"
+              class="smallIcon"
+              id="icon3"
+            />
+            <br />
+            <p class="maxTemp">
+              <strong>
+                <span class="temp" id="maxTempThird">22</span
+                ><span class="unit">ºC</span>
+              </strong>
+            </p>
+            <p class="minTemp">
+              <span class="temp" id="minTempThird">22</span
+              ><span class="unit">ºC</span>
+            </p>
+          </div>
+
+          <div class="col fourthDay">
+            <h5><strong id="dayFour">THU 7</strong></h5>
+            <img
+              src="images/clouds.png"
+              alt="clouds"
+              class="smallIcon"
+              id="icon4"
+            />
+            <br />
+            <p class="maxTemp">
+              <strong>
+                <span class="temp" id="maxTempFourth">22</span
+                ><span class="unit">ºC</span>
+              </strong>
+            </p>
+            <p class="minTemp">
+              <span class="temp" id="minTempFourth">22</span
+              ><span class="unit">ºC</span>
+            </p>
+          </div>
+
+          <div class="col fifthDay">
+            <h5><strong id="dayFive">FRI 8</strong></h5>
+            <img
+              src="images/snow.png"
+              alt="snow"
+              class="smallIcon"
+              id="icon5"
+            />
+            <br />
+            <p class="maxTemp">
+              <strong>
+                <span class="temp" id="maxTempFifth">22</span
+                ><span class="unit">ºC</span>
+              </strong>
+            </p>
+            <p class="minTemp">
+              <span class="temp" id="minTempFifth">22</span
+              ><span class="unit">ºC</span>
+            </p>
+          </div>
+        </div>
+
+        <div id="unitsLocationButtons">
+          <button id="buttonCelsius">
+            <strong>ºC</strong>
+          </button>
+
+          <button class="fahrenheit" id="buttonFahrenheit">
+            <strong>ºF</strong>
+          </button>
+
+          <button id="currentLocationButton">Current Location</button>
+        </div>
+        <footer>
+          Coded by 👩‍💻<a
+            href="https://www.linkedin.com/in/joanamirandacoelho/"
+            target="_blank"
+            >Joana Miranda</a
+          >
+        </footer>
+      </div>
+    </div>
+    <script src="src/script.js"></script>
+  </body>
+</html>
